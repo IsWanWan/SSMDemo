@@ -51,7 +51,7 @@
             <list>
                 <!--<value>classpath*:com/planet/test/dao/conf/*.xml</value>-->
                 <value>classpath*:com/planet/admin/dao/conf/AdminMapper.xml</value>
-                <!--<value>classpath*:com/planet/device/dao/conf/DeviceMapper.xml</value>-->
+                <value>classpath*:com/planet/operator/dao/conf/OperatorMapper.xml</value>
                 <!--<value>classpath*:com/planet/firms/dao/conf/FirmsMapper.xml</value>-->
                 <!--<value>classpath*:com/planet/firmsadmin/dao/conf/FirmsAdminMapper.xml</value>-->
                 <!--<value>classpath*:com/planet/log/dao/conf/LogMapper.xml</value>-->

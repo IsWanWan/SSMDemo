@@ -104,5 +104,12 @@
     <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml:3.9" level="project" />
     <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml-schemas:3.9" level="project" />
     <orderEntry type="library" name="Maven: org.apache.xmlbeans:xmlbeans:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-core:1.2.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-web:1.2.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-aspectj:1.2.4" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.6.12" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-ehcache:1.2.4" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.ehcache:ehcache-core:2.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-spring:1.2.4" level="project" />
   </component>
 </module>

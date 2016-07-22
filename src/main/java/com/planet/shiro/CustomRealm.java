@@ -3,6 +3,8 @@ package com.planet.shiro;
 
 import com.planet.operator.domain.Operator;
 import com.planet.operator.service.OperatorService;
+import com.planet.syspir.domain.Syspriv;
+import com.planet.syspir.service.SysprivService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -34,8 +36,10 @@ import java.util.List;
 public class CustomRealm extends AuthorizingRealm {
 	
 	//注入service
-@Autowired
-private OperatorService operatorService;
+	@Autowired
+	private OperatorService operatorService;
+	@Autowired
+	private SysprivService sysprivService;
 
 	// 设置realm的名称
 	@Override
@@ -184,28 +188,28 @@ private OperatorService operatorService;
 
 		//根据身份信息获取权限信息
 //		//从数据库获取到权限数据
-//		List<SysPermission> permissionList = null;
+		List<Syspriv> permissionList = null;
 		try {
-//			permissionList = sysService.findPermissionListByUserId(activeUser.getUserid());
+			permissionList = sysprivService.selectPrivByOperId(4);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//单独定一个集合对象
-//		List<String> permissions = new ArrayList<String>();
-//		if(permissionList!=null){
-//			for(SysPermission sysPermission:permissionList){
-//				//将数据库中的权限标签 符放入集合
-//				permissions.add(sysPermission.getPercode());
-//			}
-//		}
-
-
+	//	单独定一个集合对象
 		List<String> permissions = new ArrayList<String>();
-		permissions.add("TOperator:view");//用户的创建
-		permissions.add("item:query");//商品查询权限
-		permissions.add("item:add");//商品添加权限
-		permissions.add("item:edit");//商品修改权限
+		if(permissionList!=null){
+			for(Syspriv sysPermission:permissionList){
+				//将数据库中的权限标签 符放入集合
+				permissions.add(sysPermission.getCode());
+			}
+		}
+
+
+//		List<String> permissions = new ArrayList<String>();
+//		//permissions.add("TOperator:view");//用户的创建
+//		permissions.add("item:query");//商品查询权限
+//		permissions.add("item:add");//商品添加权限
+//		permissions.add("item:edit");//商品修改权限
 	//....
 
 		//查到权限数据，返回授权信息(要包括 上边的permissions)

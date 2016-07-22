@@ -15,20 +15,20 @@
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
-        <javaModelGenerator targetPackage="com.planet.syspir.domain"
+        <javaModelGenerator targetPackage="com.planet.sysrole.domain"
                             targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="com.planet.syspir.dao.conf"
+        <sqlMapGenerator targetPackage="com.planet.sysrole.dao.conf"
                          targetProject="src/main/java">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.planet.syspir.dao" targetProject="src/main/java">
+                             targetPackage="com.planet.sysrole.dao" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
-        <table schema="" tableName="t_syspriv" domainObjectName="Syspriv"
+        <table schema="" tableName="t_sysrole" domainObjectName="Sysrole"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">

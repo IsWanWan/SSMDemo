@@ -49,7 +49,7 @@ public class CustomExceptionResolver implements HandlerExceptionResolver  {
 		
 		try {
 			//转向到错误 页面
-			request.getRequestDispatcher("/WEB-INF/jsp/error.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/view/refuse.jsp").forward(request, response);
 		} catch (ServletException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

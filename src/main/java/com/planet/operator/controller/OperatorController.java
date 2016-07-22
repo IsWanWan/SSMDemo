@@ -39,29 +39,7 @@ public class OperatorController {
 
     }
 
-    /**
-     *
-     * @return
-     */
-    @RequestMapping("/first")
-    public ModelAndView first(){
-        return new ModelAndView("/first");
-    }
 
-//    /**
-//     *  获得菜单
-//     * @param opertorId
-//     * @return
-//     */
-//   @RequestMapping("/getMenu")
-//    public ModelAndView getMenu(int opertorId){
-//
-//       List<Sysmenu> sysmenuList = new ArrayList<>();
-//       sysmenuList = menuService.sysmenuList(opertorId);
-//
-//
-//       return new ModelAndView("/first");
-//   }
 
 
 

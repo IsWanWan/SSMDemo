@@ -15,20 +15,20 @@
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
-        <javaModelGenerator targetPackage="com.planet.admin.domain"
+        <javaModelGenerator targetPackage="com.planet.sysmenu.domain"
                             targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="com.planet.admin.dao.conf"
+        <sqlMapGenerator targetPackage="com.planet.sysmenu.dao.conf"
                          targetProject="src/main/java">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.planet.admin.dao" targetProject="src/main/java">
+                             targetPackage="com.planet.sysmenu.dao" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
-        <table schema="" tableName="admin" domainObjectName="Admin"
+        <table schema="" tableName="t_sysmenu" domainObjectName="Sysmenu"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">

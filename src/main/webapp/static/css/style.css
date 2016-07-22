@@ -1,0 +1,1110 @@
+/* Empty. Add your own CSS if you like */
+* {
+    font-family: PingFangSC-Regular;
+    letter-spacing: 0px;
+}
+
+.pageBody {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    background-color: #fff;
+
+}
+
+.pageBody .btnGroup {
+
+}
+
+.pageBody .title {
+    font-size: 19px;
+    color: #7685a1;
+    text-align: center;
+}
+
+.pageBody .describe {
+    font-size: 12px;
+    color: #9aabca;
+    text-align: center;
+}
+
+.backgroundText {
+    position: absolute;
+    width: 100%;
+    top: 43px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #9aabca;
+    letter-spacing: 0px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.relative, .item {
+    position: relative;
+}
+.relative{
+    padding:14px;
+    border-radius:0 0 3px 3px;
+}
+.relative>h2{
+    margin-bottom:4px;
+}
+.tooltip {
+    background: url(../img/ionmore.png) no-repeat 0 center;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    z-index: 999;
+    width: 20px;
+    height: 20px;
+
+}
+
+.itemTitle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: PingFangSC-Regular;
+    font-size: 17px;
+    color: #ffffff;
+    letter-spacing: 0px;
+    text-shadow: 0px 1px 2px rgba(126, 144, 179, 0.46);
+    text-align: left;
+    margin-left: 15px;
+}
+
+.evalutionDaysModel {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    color: #c0cfed;
+    letter-spacing: 0px;
+    line-height: 16px;
+    text-align: right;
+}
+.createTime{
+        top:37px;
+    color:#0E2D5F;
+    font-size:15px;
+}
+.evalutionPlatModel {
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    color: #9aabca;
+    letter-spacing: 0px;
+    line-height: 16px;
+    text-align: left;
+}
+
+/**/
+.register-content ::-webkit-input-placeholder {
+    color: #cfdcf3;
+}
+
+.register-content :-moz-placeholder {
+    color: #cfdcf3;
+}
+
+.register-content ::-moz-placeholder {
+    color: #cfdcf3;
+}
+
+.register-content :-ms-input-placeholder {
+    color: #cfdcf3;
+}
+
+.register-content {
+    background: url("../img/backgroundAuthor.png") no-repeat top center;
+    background-size: cover;
+}
+
+[nav-view-transition="ios"][nav-view-direction="forward"], [nav-view-transition="ios"][nav-view-direction="back"] {
+    background-color: transparent;
+}
+
+.register-content .backgroundShang {
+
+}
+
+.register-content .backgroundXia {
+    position: absolute;
+    bottom: 0;
+    background: url(../img/RectangleXia.png) no-repeat top left;
+    background-size: cover;
+    z-index: 1;
+    width: 100%;
+    height: 55%;
+}
+
+.register-content .footer {
+    position: absolute;
+    bottom: 9px;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #c0cfed;
+    letter-spacing: 0px;
+    text-align: center;
+    z-index: 4;
+    left: 50%;
+    margin-left: -90px;
+}
+
+.register-content .backgroundXia .item {
+    border: none;
+    border-bottom: 1px solid rgba(95, 162, 221, 0.10);
+    background-color: rgba(255, 255, 255, 0);
+
+}
+
+.register-content .backgroundXia .item-icon-right {
+    padding-right: 20px;
+}
+
+.register-content .submit {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.register-content .submit a.button {
+    background: #61aaff;
+    border-radius: 100px;
+    width: 200px;
+    height: 40px;
+    min-height: auto;
+    line-height: 40px;
+    font-family: PingFangSC-Regular;
+    font-size: 17px;
+    color: #ffffff;
+    letter-spacing: 0px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.register-content .item.title {
+    font-size: 19px;
+    color: #61aaff;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.register-content .item.hasAccount {
+    font-size: 14px;
+    color: #c0cfed;
+    text-align: center;
+    padding: 0;
+}
+
+.register-content .item.hasAccount a {
+    color: #61aaff;
+    /*text-decoration:underline;*/
+    border-bottom: 1px solid #61aaff;
+    padding-bottom: 2px;
+    font-size: 14px;
+}
+
+#indexDetail .personal dl {
+    text-align: center;
+}
+#indexDetail ion-header-bar{
+    background-color:#fff;
+}
+#indexDetail {
+
+    padding:40px 0;
+}
+#indexDetail ion-side-menu-content{
+    background-color:#F6F8FC;
+}
+#indexDetail .personal dl dt {
+    margin: 38px 0 33px;
+
+}
+
+#indexDetail .personal dl dt img {
+    max-width:100px;
+    max-height:100px;
+    box-shadow: 0 5px 5px #DBE1EA;
+}
+
+#indexDetail .personal dl .nickName {
+    font-size: 16px;
+    color: #7685a1;
+    letter-spacing: 0px;
+}
+
+#indexDetail .personal dl .edit {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../img/edit.png) no-repeat 0 3px;
+    margin-left: 6px;
+}
+
+#indexDetail ion-side-menu {
+    text-align: center;
+}
+#indexDetail .card, .list-inset{
+    overflow:visible;
+}
+.card{
+    border-radius:0 0 3px 3px;
+}
+#indexDetail .list:nth-child(1){
+    margin-top:54px;
+}
+
+
+#indexDetail .closeSide {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    line-height: 15px;
+    color: #8EA0C3;
+    top: 38px;
+    left: 17px;
+}
+
+#indexDetail ion-list ion-item {
+    border: none;
+}
+
+#indexDetail ion-list a {
+    padding: 14px 0;
+    font-size: 15px;
+    color: #9aabca;
+}
+#indexDetail .itemSub,.quotationList .itemSub{
+    position:absolute;
+    bottom:74px;
+    width:100%;
+    z-index:9;
+}
+.action_s .action-sheet-group .action-sheet-title,.action_s  .action-sheet-group .action-sheet-option,.action_s .action-sheet-group .button.destructive{
+    text-align:center;
+}
+.backButton {
+    position: absolute;
+    top: 39px;
+    left: 18px;
+
+}
+
+/*.backButton a {*/
+    /*display: block;*/
+    /*width: 32px;*/
+    /*height: 32px;*/
+    /*font-size: 32px;*/
+/*}*/
+
+.clearBorder {
+    border: none !important;
+}
+
+.login-content .submit {
+    margin-top: 50px;
+    font-family: PingFangSC-Regular;
+    font-size: 17px;
+    color: #ffffff;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.login-content .backgroundXia .list {
+    top: 60px;
+}
+
+.login-content .ForgetRegister {
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    color: #61aaff;
+    letter-spacing: 0px;
+    text-align: center;
+    padding-top: 0;
+}
+
+/*设置页*/
+.setInfo .header {
+    font-size: 19px;
+    color: #7685a1;
+    height: 93px;
+    display: flex;
+    position: relative;
+}
+
+.setInfo .header .ion-android-arrow-back {
+    width: 60px;
+    z-index: 10;
+    color: #9aabca;
+}
+
+.setInfo .header .title {
+    height: 100%;
+    line-height: 93px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 19px;
+    font-family: PingFangSC-Regular;
+    color: #7685a1;
+    letter-spacing: 0px;
+}
+
+.setInfo .header a:before {
+    font-size: 30px;
+    position: absolute;
+    top: 33px;
+    left: 18px;
+}
+
+.setInfo ion-content {
+    top: 87px;
+}
+
+.setInfo .right {
+    float: right;
+    font-size: 15px;
+}
+
+.setInfo .portrail {
+    position: relative;
+}
+
+.setInfo .portrail img {
+    width: 60px;
+    height: 60px;
+}
+
+.setInfo .portrail .edit {
+    background: rgba(117, 133, 160, 0.60) url(../img/edit-white.png) no-repeat 20px 19px;
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.setInfo .left {
+    color: #9aabca;
+}
+
+.setInfo .right {
+    border: none;
+    text-align: right;
+    font-size: 19px;
+    font-family: PingFangSC-Regular;
+    color: #7685a1;
+    letter-spacing: 0px;
+}
+
+.setInfo .item-content {
+    padding-right: 18px;
+}
+
+.setInfo .right .tips {
+    position: absolute;
+    top: 35px;
+    right: 13px;
+    font-size: 12px;
+    color: #cad4e8;
+    letter-spacing: 0px;
+    text-align: right;
+}
+
+.setInfo .mail {
+    height: 65px;
+    line-height: 18px;
+}
+
+.setInfo .right:focus {
+    text-align: left;
+}
+
+.setInfo .footer {
+    bottom: 10px;
+    position: absolute;
+}
+
+.setInfo ion-content {
+    bottom: 57px;
+}
+
+.setInfo .footer {
+    width: 100%;
+    display: flex;
+    z-index:1;
+}
+
+.setInfo .footer a {
+    margin: 0 auto;
+    background: #61aaff;
+    border-radius: 100px;
+    width: 139px;
+    height: 40px;
+    font-size: 17px;
+    color: #ffffff;
+    line-height: 40px;
+}
+
+/*弹出框*/
+.mypopup {
+    background: rgba(117, 133, 160, 0.70);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+
+}
+
+.mypopup.active {
+    display: block;
+}
+
+.mypopup .setinfoX {
+    position: absolute;
+    right: 16px;
+    top: 24px;
+    width: 48px;
+    text-align: right;
+}
+
+.mypopup .setinfoX:before {
+    font-size: 42px;
+}
+
+.mypopup .options {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #eaeef7;
+}
+
+.mypopup .options > div {
+    height: 61px;
+    text-align: center;
+    color: #61aaff;
+    font-size: 20px;
+    line-height: 61px;
+    border-bottom: 1px solid #eaeef7;
+    background-color: rgba(255, 255, 255, .9);
+    position: relative;
+    z-index:9;
+}
+
+.mypopup .options .agree {
+    color: #9aabca;
+}
+
+.mypopup .options .ion {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+}
+
+.suggesstions textarea {
+    width: 100%;
+    height: 240px;
+}
+
+.contactUs .footer .serverTime {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 15px;
+    color: #7685a1;
+    letter-spacing: 0px;
+}
+
+/*新估价*/
+.selPlatType ion-header-bar,.search  ion-header-bar,#indexDetail ion-header-bar{
+    box-shadow: 0px 4px 8px 0px rgba(95, 162, 221, 0.10);
+    border-bottom:none;
+    background-image:none;
+}
+
+.selPlatType ion-header-bar .title {
+    font-size: 19px;
+    color: #7685a1;
+    text-align: center;
+}
+
+.selPlatType ion-header-bar .button:before {
+    font-size: 25px;
+    color: #92A4C5;
+}
+
+.selPlatType ion-content {
+    background-color: #f6f8fc;
+}
+
+.selPlatType .box {
+    text-align: center;
+    padding: 10px 16px 0;
+}
+
+.selPlatType .box .boxTitle {
+    background: #ffffff;
+    border: 1px solid #eaeef7;
+    border-radius: 100px;
+    width: 255px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    font-size: 15px;
+    color: #61aaff;
+    letter-spacing: 0px;
+    position: relative;
+    top: 12px;
+    z-index: 10;
+    box-shadow: 0 6px 13px #ddd;
+}
+
+.selPlatType .box .boxTitle.active {
+    color: #f25b6c;
+}
+
+.selPlatType .box .boxCont {
+    background: #ffffff;
+    border-radius: 6px;
+    margin: 0 auto;
+    z-index: 9;
+}
+
+.selPlatType .box .boxCont.first {
+    padding: 30px 0 0 0;
+
+}
+
+.selPlatType .box .boxCont .boxContTitle {
+    font-size: 15px;
+    color: #7685a1;
+    margin: 0 0 18px;
+}
+
+.selPlatType .box .boxCont ul {
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.selPlatType .box .boxCont ul > li {
+    padding: 10px 11px;
+    background: rgba(95, 162, 221, 0.05);
+    border-radius: 10px;
+    font-size: 15px;
+    color: #7685a1;
+    letter-spacing: 0px;
+    margin: 0 10px 20px 10px;
+    position: relative;
+}
+
+.selPlatType .box .boxCont ul > li.active {
+    background: #9aabca;
+    color: #fff;
+}
+.selPlatType .box .boxCont ul >li .sel{
+    display:none;
+}
+.selPlatType .box .boxCont ul > li.active .sel {
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: -7px;
+    right: -7px;
+    border-radius: 50%;
+    background-color: #60A9FF;
+}
+
+.selPlatType .box .boxCont ul > li.active .sel:before {
+    font-size: 23px;
+    line-height: 18px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+}
+
+.footer .mybutton, ion-content .mybutton {
+    display: inline-block;
+    background: #61aaff;
+    border-radius: 100px;
+    font-size: 17px;
+    color: #ffffff;
+    letter-spacing: 0px;
+    text-align: center;
+    padding: 8px 43px 13px;
+    margin: 14px auto;
+    text-decoration: none;
+}
+.createProjectName .list label input{
+    text-align:center;
+    flex-basis:60%;
+}
+.createProjectName .list .item {
+    display:flex;
+    justify-content: center;
+}
+.createProjectName .addImg{
+    font-size:15px;
+}
+.createProjectName .addImg .ion-android-add-circle{
+    position:absolute;
+    top:50%;
+    font-size:40px;
+    margin-top:-20px;
+}
+
+.createProjectName .list .left{
+  line-height:34px;
+    width:72px;
+}
+    /*注册模块*/
+.registerModule .wayRegister {
+    padding: 20px 15px 0;
+}
+
+.registerModule .wayRegister ul li {
+    display: flex;
+    background-image: linear-gradient(-206deg, #def4fe 0%, #f2ebfa 95%);
+    border: 1px solid #eaeef7;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 12px #ddd;
+    position: relative;
+}
+.registerModule .wayRegister ul li.active .ion-android-radio-button-on{
+    display:block;
+}
+.registerModule .wayRegister ul li .ion-android-radio-button-on {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    font-size: 20px;
+    display:none;
+}
+
+.registerModule .wayRegister ul li .left {
+    background: url("../img/wayBack.png") no-repeat right;
+    background-size: cover;
+    width: 66%;
+    height: 100px;
+    display: inline-block;
+}
+
+.registerModule .wayRegister ul li .left > div {
+    margin: 0 36px;
+}
+
+.registerModule .wayRegister ul li .left .title {
+    margin: 20px 0 8px;
+    font-size: 16px;
+    color: #61aaff;
+    text-align: center;
+}
+
+.registerModule .wayRegister ul li .left .cont {
+    font-size: 15px;
+    color: #7685a1;
+}
+
+.registerModule .wayRegister ul li .right {
+    display: inline-block;
+    height: 100px;
+    min-width: 100px;
+    width: 33%;
+    background: url("../img/wayMail.png") no-repeat center center;
+}
+
+.registerModule .wayRegister ul li.active .right  {
+    background-image: url("../img/wayMailA.png");
+}
+
+.registerModule textarea {
+    height: 219px;
+    width: 100%;
+    padding: 3px 15px;
+    text-indent: 0;
+}
+
+.registerModule .footer {
+    font-size: 13px;
+    color: #9aabca;
+    line-height: 16px;
+    text-align: center;
+    height: 30px;
+}
+
+.quotationTem ion-header-bar .ion-android-arrow-back:before, .quotationTem ion-header-bar .title {
+    color: #fff;
+}
+.quotationTem .goIndex{
+    position:absolute;
+    left:56px;
+}
+#chart1, #chart2 {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #3E434B;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.quotationTem ion-slide {
+    height: 250px;
+}
+
+.slidebox {
+    position: relative;
+}
+
+.quotationTem .slideleft, .quotationTem .slideright {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    line-height: 250px;
+    z-index: 10;
+}
+
+.quotationTem .slideleft:before, .quotationTem .slideright:before {
+    font-size: 25px;
+    color: #fff;
+}
+
+.quotationTem .slideleft {
+    left: 18px;
+}
+
+.quotationTem .slideright {
+    right: 18px;
+}
+
+.quotationTem .ion-record:before {
+    color: #fff;
+}
+
+.quotationTem .projectEvalu {
+    padding: 34px 0 9px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px 0px rgba(95, 162, 221, 0.10);
+}
+
+.quotationTem .projectEvalu ul li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 12px;
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #6E7E9B;
+    letter-spacing: 0px;
+    line-height: 25px;
+}
+
+.quotationTem .projectEvalu ul li .title {
+    font-size: 14px;
+    color: #9aabca;
+
+}
+
+.quotationTem .goDetail {
+    display: block;
+    font-size: 15px;
+    color: #61aaff;
+    line-height: 16px;
+    text-align: center;
+    padding: 18px 0;
+}
+
+.quotationTem .box .boxCont ul > li {
+    width: 100%;
+    text-align: left;
+    display: flex;
+}
+
+.quotationTem .box .boxCont ul > li > div {
+    display: inline-block;
+    text-align: center;
+}
+
+.quotationTem .box .boxCont ul > li .left {
+    flex-basis: 30%;
+    width:110px;
+    font-size:15px;
+    color:#7685a1;
+    text-align:left;
+}
+
+.quotationTem .box .boxCont ul > li .right {
+    /*flex-grow:8;*/
+    font-size:15px;
+    color:#9aabca;
+    text-align:left;
+    flex-basis: 100%;
+}
+
+.quotationTem  ion-content .mybutton{
+    margin:34px 0 54px;
+}
+.search ion-content{
+    background-image:linear-gradient(90deg,#F6F8FC 0%,#F6F8FC 16%,#fff 16%,#fff 100%);
+}
+.search .list li{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    padding:18px 0;
+}
+.search .list li .left{
+    flex-basis: 40%;
+
+}
+.search .list li .left>div{
+   width:100px;
+   height:100px;
+    margin:0 auto;
+    border:1px solid #ECEFF7;
+    border-radius:4px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-color:#fff;
+    box-shadow:0 3px 10px #ECEFF7;
+}
+.search .list{
+    margin-top:18px;
+}
+.search .list li .right{
+    flex-basis:60%;
+    position:relative;
+}
+.search .list li hr{
+    width:100%;
+    position:absolute;
+    left:24%;
+    border:1px solid #F2F5FA;
+    margin-top:-18px;
+}
+.search .list li .right>div{
+    margin-bottom:8px;
+}
+.search .list li .right .title{
+    font-size:14px;
+    color:#61aaff;
+    height:16px;
+    line-height:16px;
+}
+.search .list li .right .price{
+    font-size:13px;
+    color:#9aabca;
+    height:15px;
+    line-height:15px;
+}
+.search .list li .right .modules{
+    font-size:12px;
+    color:#9aabca;
+    height:16px;
+    line-height:16px;
+    margin-bottom:19px;
+}
+.search .list li .right  .timeTotal{
+    font-size:12px;
+    color:#c0cfed;
+    height:16px;
+    line-height:16px;
+}
+.search .list li .right .buttons{
+    position:absolute;
+    right:0;
+    top:50%;
+    margin-top:-16px;
+}
+.search .list li .right .buttons .ion{
+    margin:0 20px 0 0;
+    font-size:30px;
+
+}
+.search .list li .right .buttons .ion-more{
+    color:#72819E;
+    text-shadow: 0px 0px 3px #72819E;
+}
+.search .list li .right .buttons .ion-ios-arrow-right{
+    color:#C5CFE6;
+}
+.quotationList .bar-subheader {
+    position:absolute;
+    width:100%;
+    z-index:9;
+}
+
+.quotationList .bar-subheader ul.listnav {
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    justify-content: center;
+    box-shadow: 0px 4px 8px 0px rgba(95, 162, 221, 0.10);
+    background-color:#fff;
+
+}
+.quotationList .bar-subheader .listnav ul li{
+    flex-basis:40%;
+}
+.quotationList .bar-subheader .listnav a{
+    font-size:15px;
+    color:#CBD5E8;
+    font-weight:500;
+    text-align:center;
+    padding:12px 8px;
+    margin:0 42px;
+    display:inline-block;
+}
+.quotationList .bar-subheader .listnav li.active a{
+    color:#7A89A4;
+    border-bottom:2px solid #7A89A4;
+
+}
+.quotationList .backgroundText{
+    top:89px;
+}
+.quotationList .item.relative{
+    box-shadow:0 -38px 36px rgba(0,0,0,0.3);
+}
+.quotationList ion-list .list{
+    background:rgba(255,249,244,.96);
+    box-shadow:0px 4px 8px 0px rgba(95,162,221,0.10);
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    min-height:30vh;
+
+}
+.quotationList ion-list{
+    position:absolute;
+    z-index:9;
+    width:100%;
+    display:none;
+}
+.quotationList .list ion-item{
+    background:transparent;
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    line-height:30px;
+    padding:7px 16px;
+    border-bottom:none;
+    border-left:none;
+    margin-left:10px;
+}
+.quotationList .list ion-item i{
+    display:none;
+}
+.quotationList .list ion-item:nth-child(1){
+    border-top:none;
+}
+.quotationList .list ion-item.active span{
+    font-size:15px;
+    color:#7685a1;
+}
+.quotationList .list ion-item.active i{
+    display:inline-block;
+}
+.quotationList .list ion-item i.ion-ios-checkmark-empty:before{
+    font-size:30px;
+}
+.quotationList .list ion-item span{
+    font-size:15px;
+    color:#9aabca;
+    text-align:left;
+}
+.quotationList ion-footer-bar .ion-android-search{
+    color:#91A4C5;
+    font-size:20px;
+    mrgin-left:5px;
+}
+.quotationList ion-footer-bar .title{
+    font-size:17px;
+    color:#61aaff;
+}
+/*分享按钮样式*/
+.myActionSheet{
+    position:absolute;
+    padding:0 15px;
+    background-color:#fff;
+    font-size:15px;
+    z-index:999;
+    width:132px;
+    border-radius:4px;
+}
+.myActionSheet .ion{
+
+}
+.myActionSheet li{
+    padding:13px 0;
+}
+.myActionSheet li:nth-child(1){
+    border-bottom:1px solid #ccc;
+}
+.myActionSheet{
+    top:13px;
+    right:-13px;
+    box-shadow:-3px  9px 27px 6px #ccc;
+    color:#666;
+    font-size:20px;
+}
+.myActionSheet i{
+    font-size:25px;
+    margin-right:13%;
+}
+#indexDetail .logOut{
+    font-size:18px;
+    color:#7685a1;
+    text-align:center;
+}
+.quotationList .list .relative{
+    z-index:1;
+}
+.backrouterB,.backrouterW{
+    display:inline-block;
+    width:18px;
+    height:16px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    position:absolute;
+    top:50%;
+    margin-top:-24px;
+    margin-left:18px;
+    z-index:10;
+}
+.backrouterB{
+    background-image:url("../img/backrouterB.png");
+}
+.backrouterW{
+    background-image:url("../img/backrouterW.png");
+}
+.login-content .backrouterW,.register-content .backrouterW,.quotationList .backrouterB{
+    margin-left:0;
+}
+.createProjectName .backrouterW,.selPlatType .backrouterB,.selPlatType .backrouterW,.quotationList .backrouterB{
+    margin-left:16px;
+    margin-top:-16px;
+}
+
+
+
+
+
+
+

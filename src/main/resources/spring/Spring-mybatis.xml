@@ -49,7 +49,7 @@
         <!-- 自动扫描mapping.xml文件 -->
         <property name="mapperLocations">
             <list>
-                <!--<value>classpath*:com/planet/test/dao/conf/*.xml</value>-->
+                <value>classpath*:com/planet/sysmenu/dao/conf/SysmenuMapper.xml</value>
                 <value>classpath*:com/planet/admin/dao/conf/AdminMapper.xml</value>
                 <value>classpath*:com/planet/operator/dao/conf/OperatorMapper.xml</value>
                 <!--<value>classpath*:com/planet/firms/dao/conf/FirmsMapper.xml</value>-->

@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>估价宝后台管理首页</title>
+    <title>shiro测试</title>
     <script src="/static/jquery/jquery.min.js" type="text/javascript"></script>
     <link href="/static/jquery/themes/icon.css" rel="stylesheet" type="text/css"/>
     <link href="/static/jquery/themes/color.css" rel="stylesheet" type="text/css"/>

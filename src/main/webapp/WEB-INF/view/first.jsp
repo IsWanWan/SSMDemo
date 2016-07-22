@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>估价宝后台管理首页</title>
+    <title>shiro菜单页</title>
     <script src="/static/jquery/jquery.min.js" type="text/javascript"></script>
     <link href="/static/jquery/themes/icon.css" rel="stylesheet" type="text/css"/>
     <link href="/static/jquery/themes/color.css" rel="stylesheet" type="text/css"/>
@@ -53,7 +53,7 @@
             <div title="管理列表" data-options="iconCls:'icon-reload'" class="planet-menu">
 
                 <c:forEach items="${sysmenuList}" var="sysmenu">
-                    <a href="/operator/list" class="planet-menu-item js-menu-item">${sysmenu.name}</a>
+                    <a href="${sysmenu.navigateUrl}" class="planet-menu-item js-menu-item">${sysmenu.name}</a>
 
                 </c:forEach>
                 <%--<a href="/user/index" class="planet-menu-item js-menu-item">用户信息</a>--%>
@@ -69,7 +69,7 @@
         </div>
 
     </div>
-    <button class="button" style="z-index: 998;position: absolute; right: 2px;top: 1px;" ><a href="/login/logout">退出登录</a></button>
+    <button class="button" style="z-index: 998;position: absolute; right: 2px;top: 1px;" ><a href="/logout">退出登录</a></button>
     <div data-options="region:'center',split:true" style="padding:0px;background:#eee;">
         <div id="tt" class="easyui-tabs" style="width:100%;height:100%;" border=0>
 

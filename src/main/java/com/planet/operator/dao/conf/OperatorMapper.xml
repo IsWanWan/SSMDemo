@@ -267,4 +267,11 @@
       CP_CODE = #{cpCode,jdbcType=BIGINT}
     where ID = #{id,jdbcType=BIGINT}
   </update>
+
+  <select id="getList" resultMap="BaseResultMap" >
+      SELECT * FROM test.t_operator;
+  </select>
+
+
+
 </mapper>

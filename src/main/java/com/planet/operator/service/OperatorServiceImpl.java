@@ -6,6 +6,8 @@ import com.planet.operator.domain.Operator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by wanwan on 16/7/21.
  */
@@ -48,5 +50,10 @@ public class OperatorServiceImpl implements OperatorService {
     @Override
     public Operator selectByUsername(String username) {
         return operatorMapper.selectByUsername(username);
+    }
+
+    @Override
+    public List<Operator> getList() {
+        return operatorMapper.getList();
     }
 }

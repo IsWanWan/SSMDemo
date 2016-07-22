@@ -3,6 +3,8 @@ package com.planet.operator.service;
 
 import com.planet.operator.domain.Operator;
 
+import java.util.List;
+
 /**
  * Created by wanwan on 16/7/21.
  */
@@ -21,4 +23,6 @@ public interface OperatorService {
     int updateByPrimaryKey(Operator record);
 
     Operator selectByUsername(String username);
+
+    List<Operator> getList();
 }

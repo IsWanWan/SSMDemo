@@ -192,7 +192,7 @@ private OperatorService operatorService;
 			e.printStackTrace();
 		}
 		//单独定一个集合对象
-		List<String> permissions = new ArrayList<String>();
+//		List<String> permissions = new ArrayList<String>();
 //		if(permissionList!=null){
 //			for(SysPermission sysPermission:permissionList){
 //				//将数据库中的权限标签 符放入集合
@@ -201,12 +201,12 @@ private OperatorService operatorService;
 //		}
 
 
-	/*	List<String> permissions = new ArrayList<String>();
-		permissions.add("user:create");//用户的创建
+		List<String> permissions = new ArrayList<String>();
+		permissions.add("TOperator:view");//用户的创建
 		permissions.add("item:query");//商品查询权限
 		permissions.add("item:add");//商品添加权限
 		permissions.add("item:edit");//商品修改权限
-*/		//....
+	//....
 
 		//查到权限数据，返回授权信息(要包括 上边的permissions)
 		SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();

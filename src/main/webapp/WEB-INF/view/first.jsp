@@ -53,7 +53,7 @@
             <div title="管理列表" data-options="iconCls:'icon-reload'" class="planet-menu">
 
                 <c:forEach items="${sysmenuList}" var="sysmenu">
-                    <a href="/user/index" class="planet-menu-item js-menu-item">${sysmenu.name}</a>
+                    <a href="/operator/list" class="planet-menu-item js-menu-item">${sysmenu.name}</a>
 
                 </c:forEach>
                 <%--<a href="/user/index" class="planet-menu-item js-menu-item">用户信息</a>--%>

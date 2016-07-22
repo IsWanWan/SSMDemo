@@ -3,13 +3,15 @@ package com.planet.operator.controller;
 
 import com.planet.operator.domain.Operator;
 import com.planet.operator.service.OperatorService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
-import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import java.util.*;
 
 /**
  * Created by wanwan on 16/7/21.
@@ -22,8 +24,7 @@ public class OperatorController {
     @Autowired
     private OperatorService operatorService;
 
-//    @Autowired
-//    private MenuService menuService;
+
 
     @RequestMapping("/byUsername")
     public ModelAndView byUsername(String username){
@@ -39,8 +40,17 @@ public class OperatorController {
 
     }
 
+    @RequestMapping("/list")
+    @RequiresPermissions("TOperator:view")
+    public ModelAndView listPageOperator(){
+        ModelAndView mv = new ModelAndView();
+     List<Operator> operatorList = new ArrayList<>();
 
-
+     operatorList = operatorService.getList();
+        mv.addObject("operatorList",operatorList);
+        mv.setViewName("/opertor");
+     return mv;
+    }
 
 
 }

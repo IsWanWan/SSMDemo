@@ -5,6 +5,8 @@ import com.planet.common.mybatis.MybatisMapper;
 import com.planet.operator.domain.Operator;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface OperatorMapper extends MybatisMapper{
     int deleteByPrimaryKey(Long id);
@@ -20,4 +22,6 @@ public interface OperatorMapper extends MybatisMapper{
     int updateByPrimaryKey(Operator record);
 
     Operator selectByUsername(String username);
+
+    List<Operator> getList();
 }

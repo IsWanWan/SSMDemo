@@ -51,58 +51,6 @@ public class CustomRealm extends AuthorizingRealm {
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(
 			AuthenticationToken authcToken) throws AuthenticationException {
-//
-//		// token是用户输入的用户名和密码
-//		// 第一步从token中取出用户名
-//		String userCode = (String) token.getPrincipal();
-//
-//		// 第二步：根据用户输入的userCode从数据库查询
-//		 Admin admin = null;
-//	    if(userCode.equals("zhaoxiuling")){
-//			//admin = adminService.getByUsername(userCode);
-//			admin.setUsername("zhaoxiuling");
-//			admin.setPassword("123456");
-//
-//			admin.setId(1);
-//		}
-//
-//		// 如果查询不到返回nul
-//		if(admin == null){
-//			return null;
-//		}
-//		// 从数据库查询到密码
-//		String password = admin.getPassword();
-//
-//		//盐
-//
-//
-//		// 如果查询到返回认证信息AuthenticationInfo
-//
-//		//activeUser就是用户身份信息
-//		ActiveUser activeUser = new ActiveUser();
-//
-//		activeUser.setUserid(admin.getId());
-//		//activeUser.setUsercode(a.getUsercode());
-//		activeUser.setUsername(admin.getUsername());
-//		//..
-//
-////		//根据用户id取出菜单
-////		List<SysPermission> menus  = null;
-////		try {
-////			//通过service取出菜单
-////			menus = sysService.findMenuListByUserId(sysUser.getId());
-////		} catch (Exception e) {
-////			// TODO Auto-generated catch block
-////			e.printStackTrace();
-////		}
-////		//将用户菜单 设置到activeUser
-////		activeUser.setMenus(menus);
-//
-//		//将activeUser设置simpleAuthenticationInfo
-//		SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(
-//				activeUser, password, this.getName());
-//
-//		return simpleAuthenticationInfo;
 
 
 		UsernamePasswordToken token = (UsernamePasswordToken) authcToken;
@@ -112,8 +60,9 @@ public class CustomRealm extends AuthorizingRealm {
 		if( username != null && !"".equals(username) ){
 			Operator operator = operatorService.selectByUsername(username);
 			if( operator != null ){
+
 				return new SimpleAuthenticationInfo(
-						operator.getLoginName(),operator.getPassword(),getName() );
+						operator,operator.getPassword(),getName() );
 			}
 		}
 

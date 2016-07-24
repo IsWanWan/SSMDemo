@@ -52,14 +52,18 @@
         <div id="aa" class="easyui-accordion" style="width:100%;height:100%;">
             <div title="管理列表" data-options="iconCls:'icon-reload'" class="planet-menu">
 
-                <a href="/user/index" class="planet-menu-item js-menu-item">用户信息</a>
-                <a href="/feedback/index" class="planet-menu-item js-menu-item">用户反馈</a>
-                <a href="/project/index" class="planet-menu-item js-menu-item">项目信息</a>
-                <a href="/category/index" class="planet-menu-item js-menu-item">分类信息</a>
-                <a href="/function/index" class="planet-menu-item js-menu-item">功能模块</a>
-                <a href="/template/index" class="planet-menu-item js-menu-item">模板信息</a>
-                <a href="/analyse/index" class="planet-menu-item js-menu-item">使用分析</a>
-                <a href="/admin/index" class="planet-menu-item js-menu-item">管理员管理</a>
+                <%--<c:forEach items="${sysmenuList}" var="sysmenu">--%>
+                    <%--<a href="${sysmenu.navigateUrl}" class="planet-menu-item js-menu-item">${sysmenu.name}</a>--%>
+
+                <%--</c:forEach>--%>
+                <%--<a href="/user/index" class="planet-menu-item js-menu-item">用户信息</a>--%>
+                <a href="/operator/list" class="planet-menu-item js-menu-item"> 操作者信息</a>
+                <a href="/role/list" class="planet-menu-item js-menu-item">角色信息</a>
+                <%--<a href="/category/index" class="planet-menu-item js-menu-item">分类信息</a>--%>
+                <%--<a href="/function/index" class="planet-menu-item js-menu-item">功能模块</a>--%>
+                <%--<a href="/template/index" class="planet-menu-item js-menu-item">模板信息</a>--%>
+                <%--<a href="/analyse/index" class="planet-menu-item js-menu-item">使用分析</a>--%>
+                <%--<a href="/admin/index" class="planet-menu-item js-menu-item">管理员管理</a>--%>
 
             </div>
         </div>

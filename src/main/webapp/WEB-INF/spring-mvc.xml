@@ -25,9 +25,15 @@
         <property name="securityManager" ref="securityManager" />
     </bean>
     <!-- 定义统一异常处理器 -->
-    <bean class="com.planet.exception.CustomExceptionResolver"></bean>
+    <!--<bean class="com.planet.exception.CustomExceptionResolver"></bean>-->
 
-
+    <!--<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+        <!--<property name="exceptionMappings">-->
+            <!--<props>-->
+                <!--<prop key="org.apache.shiro.authz.UnauthorizedException">/refuse</prop>-->
+            <!--</props>-->
+        <!--</property>-->
+    <!--</bean>-->
     <!-- 自动扫描该包,功能覆盖了context:annotation-config -->
     <context:component-scan base-package="com.planet"/>
 

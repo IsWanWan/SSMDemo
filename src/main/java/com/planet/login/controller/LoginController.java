@@ -1,14 +1,19 @@
 package com.planet.login.controller;
 
 import com.planet.exception.CustomException;
+import com.planet.operator.domain.Operator;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -58,23 +63,32 @@ public class LoginController {
 	}*/
 	
 	//登陆提交地址，和applicationContext-shiro.xml中配置的loginurl一致
-	@RequestMapping("/login")
+	@RequestMapping("/doLogin")
 	public String login(HttpServletRequest request)throws Exception{
-		
+		Map<String,Object> map = new HashMap<>();
+
+
+
 		//如果登陆失败从request中获取认证异常信息，shiroLoginFailure就是shiro异常类的全限定名
 		String exceptionClassName = (String) request.getAttribute("shiroLoginFailure");
 		//根据shiro返回的异常类路径判断，抛出指定异常信息
 		if(exceptionClassName!=null){
 			if (UnknownAccountException.class.getName().equals(exceptionClassName)) {
+				map.put("code",500);
+				map.put("msg","用户名或者密码错误");
 				//最终会抛给异常处理器
-				throw new CustomException("账号不存在");
+				//throw new CustomException("账号不存在");
 			} else if (IncorrectCredentialsException.class.getName().equals(
 					exceptionClassName)) {
-				throw new CustomException("用户名/密码错误");
+				//throw new CustomException("用户名/密码错误");
+				map.put("code",500);
+				map.put("msg","用户名或者密码错误");
 			} else if("randomCodeError".equals(exceptionClassName)) {
-				throw new CustomException("验证码错误 ");
-			}else{
-				throw new Exception("其他错误");
+				map.put("code",500);
+				map.put("msg","用户名或者密码错误");
+			//	throw new CustomException("验证码错误 ");
+			}else {
+				//throw new Exception("其他错误");
 			}
 //			}else if("AuthenticationException".equals(exceptionClassName)){
 //				throw new CustomException("其他异常");//最终在异常处理器生成未知错误
@@ -82,19 +96,14 @@ public class LoginController {
 		}
 		//此方法不处理登陆成功（认证成功），shiro认证成功会自动跳转到上一个请求路径
 		//登陆失败还到login页面
-		return "/login";
+		//return map;
+
+			return "/login";
+
+
 	}
 	
-/*	//用户退出
-	@RequestMapping("/logout")
-	public String logout(HttpSession session)throws Exception{
-		
-		//session失效
-		session.invalidate();
-		//重定向到商品查询页面
-		return "redirect:/first.action";
-		
-	}*/
+
 	
   @RequestMapping("/refuse")
 	public ModelAndView refuse(){

@@ -64,28 +64,25 @@ public class LoginController {
 	
 	//登陆提交地址，和applicationContext-shiro.xml中配置的loginurl一致
 	@RequestMapping("/doLogin")
-	public String login(HttpServletRequest request)throws Exception{
+	public ModelAndView login(HttpServletRequest request)throws Exception{
 		Map<String,Object> map = new HashMap<>();
-
-
+		ModelAndView mv = new ModelAndView();
+String message="";
 
 		//如果登陆失败从request中获取认证异常信息，shiroLoginFailure就是shiro异常类的全限定名
 		String exceptionClassName = (String) request.getAttribute("shiroLoginFailure");
 		//根据shiro返回的异常类路径判断，抛出指定异常信息
 		if(exceptionClassName!=null){
 			if (UnknownAccountException.class.getName().equals(exceptionClassName)) {
-				map.put("code",500);
-				map.put("msg","用户名或者密码错误");
+				message = "帐号不存在";
 				//最终会抛给异常处理器
 				//throw new CustomException("账号不存在");
 			} else if (IncorrectCredentialsException.class.getName().equals(
 					exceptionClassName)) {
 				//throw new CustomException("用户名/密码错误");
-				map.put("code",500);
-				map.put("msg","用户名或者密码错误");
+				message ="用户名或密码错误";
 			} else if("randomCodeError".equals(exceptionClassName)) {
-				map.put("code",500);
-				map.put("msg","用户名或者密码错误");
+				message ="验证马错误";
 			//	throw new CustomException("验证码错误 ");
 			}else {
 				//throw new Exception("其他错误");
@@ -97,8 +94,10 @@ public class LoginController {
 		//此方法不处理登陆成功（认证成功），shiro认证成功会自动跳转到上一个请求路径
 		//登陆失败还到login页面
 		//return map;
+		  mv.addObject("message",message);
+        mv.setViewName("/login");
 
-			return "/login";
+			return mv;
 
 
 	}

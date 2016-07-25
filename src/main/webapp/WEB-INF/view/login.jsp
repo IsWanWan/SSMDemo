@@ -141,11 +141,15 @@
                 <label>密&emsp;码：</label>
                 <input type="password" id="pass" name="password" maxlength="30">
             </div>
+
             <%--<div style="margin-left: 23px">--%>
                 <%--<label>验证码：</label>--%>
                 <%--<input type="text" id="input1" maxlength="4" class="form-input">--%>
                 <%--<input type="text" readonly="readonly" id="checkCode" onclick="createCode()" class="login-input-code1">--%>
             <%--</div>--%>
+            <div>
+                ${message}
+            </div>
             <div style="margin-top: 6px">
 
                 <%--<a class="easyui-linkbutton" onclick="checkpost()"--%>
@@ -192,37 +196,39 @@
 //        createCode();
 //    }
 //    init();
-    <%--function checkpost() {--%>
-        <%--var httpConfig = {--%>
-            <%--username: $("#user").val(),--%>
-            <%--password: $("#pass").val()--%>
-        <%--};--%>
-        <%--console.log(httpConfig);--%>
-        <%--$.ajax(--%>
-                <%--{--%>
-                    <%--method: "post",--%>
-                    <%--url: "/login/doLogin",--%>
-                    <%--params: httpConfig,--%>
-                    <%--success: function (resultJson) {--%>
-                        <%--console.log(resultJson);--%>
-                      <%--//  alert(resultJson.code);--%>
+    function checkpost() {
+        var httpConfig = {
+            username: $("#user").val(),
+            password: $("#pass").val()
+        };
+        console.log(httpConfig);
+        $.ajax(
+                {
+                    method: "post",
+                    url: "/login/doLogin",
+                    params: httpConfig,
+                    success: function (resultJson) {
+                        console.log(resultJson);
+                        resultJson = JSON.parse(resultJson);
+
+                        alert(resultJson.message);
 
 
-                        <%--//   alert(JSON.stringify(resultJson));--%>
-                        <%--if (resultJson.code == 200) {--%>
-                            <%--window.location.href = "/admin/index";--%>
-                        <%--} else {--%>
-                            <%--//回调操作--%>
-                            <%--alert("用户名或密码不正确！");--%>
-<%--//                $.messager.confirm("提示", "用户名或密码不正确！");--%>
-                            <%--createCode();--%>
-                        <%--}--%>
-                    <%--}--%>
-                <%--});--%>
+//                        //   alert(JSON.stringify(resultJson));
+//                        if (resultJson.code == 200) {
+//                            window.location.href = "/admin/index";
+//                        } else {
+//                            //回调操作
+//                            alert("用户名或密码不正确！");
+////                $.messager.confirm("提示", "用户名或密码不正确！");
+//                            createCode();
+//                        }
+                    }
+                });
 
 
-    <%--}--%>
-<%--</script>--%>
+    }
+</script>
 </body>
 
 

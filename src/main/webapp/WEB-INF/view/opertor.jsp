@@ -15,12 +15,12 @@
 </head>
 <body>
 
-<table width="600px">
+<table width="900px">
 
     <tr>
-        <td width="100px">用户名</td>
-        <td width="100px">邮箱</td>
-        <td width="100px">电话</td>
+        <td width="200px">用户名</td>
+        <td width="200px">邮箱</td>
+        <td width="200px">电话</td>
         <td width="300px">操作</td>
 
     </tr>

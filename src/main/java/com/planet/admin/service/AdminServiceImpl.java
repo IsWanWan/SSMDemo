@@ -16,4 +16,9 @@ public class AdminServiceImpl implements  AdminService {
     public Admin selectByPrimaryKey(int id) {
        return adminMapper.selectByPrimaryKey(id);
     }
+
+    @Override
+    public int delete(int id) {
+        return 0;
+    }
 }

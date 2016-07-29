@@ -1,12 +1,9 @@
 package com.planet.login.controller;
 
-import com.planet.exception.CustomException;
-import com.planet.operator.domain.Operator;
-import org.apache.shiro.SecurityUtils;
+
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 
-import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -40,34 +37,13 @@ public class LoginController {
 	 * @return
 	 * @throws Exception
 	 */
-	/*@RequestMapping("/login")
-	public String login(HttpSession session, String randomcode,String usercode,String password)throws Exception{
-		
-		//校验验证码，防止恶性攻击
-		//从session获取正确验证码
-		String validateCode = (String) session.getAttribute("validateCode");
-		
-		//输入的验证和session中的验证进行对比 
-		if(!randomcode.equals(validateCode)){
-			//抛出异常
-			throw new CustomException("验证码输入错误");
-		}
-		
-		//调用service校验用户账号和密码的正确性
-		ActiveUser activeUser = sysService.authenticat(usercode, password);
-		
-		//如果service校验通过，将用户身份记录到session
-		session.setAttribute("activeUser", activeUser);
-		//重定向到商品查询页面
-		return "redirect:/first.action";
-	}*/
 	
 	//登陆提交地址，和applicationContext-shiro.xml中配置的loginurl一致
 	@RequestMapping("/doLogin")
 	public ModelAndView login(HttpServletRequest request)throws Exception{
 		Map<String,Object> map = new HashMap<>();
 		ModelAndView mv = new ModelAndView();
-String message="";
+        String message="";
 
 		//如果登陆失败从request中获取认证异常信息，shiroLoginFailure就是shiro异常类的全限定名
 		String exceptionClassName = (String) request.getAttribute("shiroLoginFailure");
@@ -75,27 +51,19 @@ String message="";
 		if(exceptionClassName!=null){
 			if (UnknownAccountException.class.getName().equals(exceptionClassName)) {
 				message = "帐号不存在";
-				//最终会抛给异常处理器
-				//throw new CustomException("账号不存在");
+
 			} else if (IncorrectCredentialsException.class.getName().equals(
 					exceptionClassName)) {
-				//throw new CustomException("用户名/密码错误");
 				message ="用户名或密码错误";
 			} else if("randomCodeError".equals(exceptionClassName)) {
 				message ="验证马错误";
-			//	throw new CustomException("验证码错误 ");
 			}else {
-				//throw new Exception("其他错误");
+				message="其他错误";
 			}
-//			}else if("AuthenticationException".equals(exceptionClassName)){
-//				throw new CustomException("其他异常");//最终在异常处理器生成未知错误
-//			}
 		}
-		//此方法不处理登陆成功（认证成功），shiro认证成功会自动跳转到上一个请求路径
-		//登陆失败还到login页面
-		//return map;
-		  mv.addObject("message",message);
-        mv.setViewName("/login");
+
+		   mv.addObject("message",message);
+           mv.setViewName("/login");
 
 			return mv;
 

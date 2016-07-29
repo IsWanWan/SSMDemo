@@ -25,9 +25,10 @@
 
 
   <select id="sysmenuList" resultMap="BaseResultMap" parameterType="java.lang.Long" >
-    SELECT
-   s.*
-    FROM t_sysmenu s
+   select m.* from t_operator p,t_operator_role pr,t_sysrole_menu sm,t_sysmenu m
+where p.ID = pr.OPERATOR_ID
+and pr.ROLE_IDS = sm.ROLE_ID
+ and sm.MENU_IDS = m.ID and p.ID=#{opertorId,jdbcType=BIGINT}
 
   </select>
 

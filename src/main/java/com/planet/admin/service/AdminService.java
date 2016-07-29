@@ -8,4 +8,6 @@ import com.planet.admin.domain.Admin;
 public interface AdminService {
 
     public Admin selectByPrimaryKey(int id);
+
+    public int delete(int id);
 }

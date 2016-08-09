@@ -1,5 +1,8 @@
 package com.planet.admin.domain;
 
+import org.springframework.stereotype.Component;
+
+@Component("admin")
 public class Admin {
     private Integer id;
 

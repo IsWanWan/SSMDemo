@@ -9,6 +9,8 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 
 import com.planet.wechart.vo.Token;
@@ -17,6 +19,7 @@ import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 /**
  * Created by wanwan on 16/8/9.
@@ -203,6 +206,30 @@ public class CommonUtil {
             }
         }
         return weixinUserInfo;
+    }
+
+
+    /**
+     * 获取用户的openId，并放入session
+     * @param code 微信返回的code
+     */
+    private void setOpenId(HttpServletRequest request, String code) {
+       // session.put("code", code);
+         HttpSession session = request.getSession();
+
+//         code = request.getParameter("code");
+        String oauth_url = WechartConf.oauth_url.replace("APPID", WechartConf.APPID).replace("SECRET", WechartConf.APPSECRET).replace("CODE", code);
+        log.info("oauth_url:"+oauth_url);
+        JSONObject jsonObject = CommonUtil.httpsRequest(oauth_url, "POST", null);
+        log.info("jsonObject:"+jsonObject);
+        Object errorCode = jsonObject.get("errcode");
+        if(errorCode != null) {
+            log.info("code不合法");
+        }else{
+            String openId = jsonObject.getString("openid");
+            log.info("openId:"+openId);
+            session.setAttribute("openId", openId);
+        }
     }
 
 }

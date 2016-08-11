@@ -32,5 +32,15 @@ public class WechartConf {
 
     //微信jspai_ticket
     public static String jsapi_ticket = "https://api.weixin.qq.com/cgi-bin/ticket/getticket";
+    //获取openId
+    public static String oauth_url = "https://api.weixin.qq.com/sns/oauth/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code";
+    // 根据openId 获得用户信息
+    String requestUrl = "https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN&openid=OPENID";
+    // 凭证获取（GET）获取 accesstoken
+    public final static String token_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
 
+    //获取用户授权 返回一个code  redirect_uri 重定向地址 snsapi_base:不弹出授权页面，直接跳转，
+    // 只能获取用户openid snsapi_userinfo:弹出授权页面，可通过openid拿到昵称、性别、所在;
+   private final static String codeUrl ="https://open.weixin.qq.com/connect/oauth/authorize?appid=appid&redirect_uri=url" +
+           "&response_type=code&scope=snsapi_userinfo&state=park#wechat_redirect";
 }

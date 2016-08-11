@@ -102,4 +102,10 @@ public class Sysmenu {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
+
+
+
+
+
 }

@@ -62,4 +62,15 @@ public class Sysrole {
     public void setDescription(String description) {
         this.description = description == null ? null : description.trim();
     }
+
+    public Sysrole(String name, Integer type, Date createTime, Integer status, String description) {
+        this.name = name;
+        this.type = type;
+        this.createTime = createTime;
+        this.status = status;
+        this.description = description;
+    }
+    public Sysrole() {
+
+    }
 }

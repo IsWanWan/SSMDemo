@@ -19,8 +19,6 @@ import java.util.*;
 @Controller
 @RequestMapping("/operator")
 public class OperatorController {
-
-
     @Autowired
     private OperatorService operatorService;
 

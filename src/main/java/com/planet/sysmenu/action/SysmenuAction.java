@@ -31,6 +31,9 @@ public class SysmenuAction {
      */
     @RequestMapping("/first")
     public ModelAndView first(){
+
+       int n =   sysmenuService.test("财务",1,1);
+        System.out.print( "nnnnn:" +n);
         return new ModelAndView("/first");
     }
 

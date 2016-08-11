@@ -28,7 +28,7 @@
                              targetPackage="com.planet.sysrole.dao" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
-        <table schema="" tableName="t_sysrole" domainObjectName="Sysrole"
+        <table schema="" tableName="t_sysrole_menu" domainObjectName="SysroleMenu"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">

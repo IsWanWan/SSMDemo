@@ -53,7 +53,8 @@
                 <value>classpath*:com/planet/admin/dao/conf/AdminMapper.xml</value>
                 <value>classpath*:com/planet/operator/dao/conf/OperatorMapper.xml</value>
                 <value>classpath*:com/planet/syspir/dao/conf/SysprivMapper.xml</value>
-                <!--<value>classpath*:com/planet/firmsadmin/dao/conf/FirmsAdminMapper.xml</value>-->
+                <value>classpath*:com/planet/sysrole/dao/conf/SysroleMapper.xml</value>
+                <value>classpath*:com/planet/sysrole/dao/conf/SysroleMenuMapper.xml</value>
                 <!--<value>classpath*:com/planet/log/dao/conf/LogMapper.xml</value>-->
                 <!--<value>classpath*:com/planet/cows/dao/conf/CowsMapper.xml</value>-->
                 <!--<value>classpath*:com/planet/weight/dao/conf/WeightMapper.xml</value>-->

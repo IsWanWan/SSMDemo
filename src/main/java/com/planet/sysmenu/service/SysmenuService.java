@@ -23,4 +23,14 @@ public interface SysmenuService {
     int updateByPrimaryKey(Sysmenu record);
 
     List<Sysmenu> sysmenuList(long opertorId);
+
+
+    /**
+     *  事务测试
+     * @param title
+     * @param type
+     * @param status
+     * @return
+     */
+    int test(String title,int type,int status );
 }

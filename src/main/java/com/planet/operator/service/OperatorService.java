@@ -25,4 +25,7 @@ public interface OperatorService {
     Operator selectByUsername(String username);
 
     List<Operator> getList();
+
+
+
 }

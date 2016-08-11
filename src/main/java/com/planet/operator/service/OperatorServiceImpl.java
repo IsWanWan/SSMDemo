@@ -17,6 +17,7 @@ public class OperatorServiceImpl implements OperatorService {
     @Autowired
     private OperatorMapper operatorMapper;
 
+
     @Override
     public int deleteByPrimaryKey(Long id) {
         return 0;
